@@ -49,7 +49,7 @@ export const useSavedItems = (maxItems = 50) => {
         setOrders([]);
       }
     }
-  }, []);
+  }, [maxItems]);
 
   const saveItem = useCallback((item: SavedItem) => {
     setSavedItems((prev) => {
