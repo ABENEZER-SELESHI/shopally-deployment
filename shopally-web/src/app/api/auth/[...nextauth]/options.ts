@@ -19,7 +19,7 @@ export const options: NextAuthOptions = {
   ],
 
   pages: {
-    signIn: '/api/auth/custom-signin',
+    signIn: "/custom-signin",
   },
 
   callbacks: {
