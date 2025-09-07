@@ -1,14 +1,13 @@
+//src/app/components/AuthComponents/CustomSignInComponent.tsx
 "use client";
 
 import { ClientSafeProvider, getProviders, signIn } from "next-auth/react";
 import Image from "next/image";
-import { useSearchParams } from "next/navigation";
+// import { useSearchParams } from "next/navigation";
 import { useEffect, useState } from "react";
 
 export default function CustomSignIn() {
-  // const router = useRouter();
-  const searchParams = useSearchParams();
-  const callbackUrl = searchParams.get("callbackUrl") || "/home";
+  // const router = useRouter();\
   const [isLoading, setIsLoading] = useState(false);
   const [providers, setProviders] = useState<Record<
     string,
@@ -26,7 +25,7 @@ export default function CustomSignIn() {
   const handleGoogleSignIn = async () => {
     setIsLoading(true);
     try {
-      await signIn("google", { callbackUrl });
+      await signIn("google", { callbackUrl: "/home" });
     } catch (error) {
       console.error("Sign in error:", error);
       setIsLoading(false);
