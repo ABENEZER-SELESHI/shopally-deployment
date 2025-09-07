@@ -2,7 +2,7 @@
 import dynamic from "next/dynamic";
 
 const CustomSignIn = dynamic(
-  () => import("./CustomSignInComponent"),
+  () => import("../../components/AuthComponents/CustomSignInComponent"),
   { ssr: false } // This disables server-side rendering
 );
 
